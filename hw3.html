@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Questions and Answers</h1>
+
+<script>
+
+function Post(){
+    const XHR = new XMLHttpRequest();
+
+
+
+}
+</script>
+
+<p id="s">Write a question and post it</p>
+
+<p id="saved"></p>
+
+  <p id="saved"></p>
+  
+<script>
+    function callPOSTApi() {
+    var http = new XMLHttpRequest();
+    var url = 'https://9p9ecei6pe.execute-api.us-east-1.amazonaws.com/stage_2';
+    let x = document.getElementById("question").value;
+    var params = x;
+    http.open('POST', url, true);
+
+    //Send the proper header information along with the request
+    http.setRequestHeader('Content-type', 'application/json');
+    http.setRequestHeader('Access-Control-Allow-Headers', '*');
+    http.setRequestHeader('Access-Control-Allow-Methods', '*');
+    http.setRequestHeader('Access-Control-Allow-Origin', '*');
+    http.onreadystatechange = function() {//Call a function when the state changes.
+        if(http.readyState == 4 && http.status == 200) {
+            
+            console.log(http.responseText);
+        }
+    }
+    
+    http.send(params);
+}
+</script>
+
+
+<!--<form name="myForm">-->
+    <input type="text" id="question" name="question" size="50">
+    <input type="submit" value="Post question" onclick= "callPOSTApi()">
+<!--  </form> -->
+
