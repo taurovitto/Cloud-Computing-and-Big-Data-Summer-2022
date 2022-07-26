@@ -8,6 +8,6 @@ Link AWS S3 hw2:
 
 https://assignmentvc2280.s3.amazonaws.com/assignment_2_vc2280.html
 
-Link AWS S3 hw3:
+Link AWS S3 hw3/hw4:
 
 https://assignmentvc2280.s3.amazonaws.com/hw3.html
